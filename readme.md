@@ -1,3 +1,42 @@
+### Intro
+
+This repository is under development. This readme has a cluster of relevant information that needs to be refined.
+
+
+
+
+### Example Usage
+
+#### `endicia.promise_rates`:
+
+```
+
+    var endicia_config = require(process.env.root+'/config/endicia.json')["sandbox"];
+    var endicia_interface = require('/shipping-endicia');
+    var endicia =  new endicia_interface({
+        server : endicia_config.server,
+        requester_id : endicia_config.requester_id,
+        account_id : endicia_config.account_id,
+        token : endicia_config.token,
+    });
+
+
+    var request_object = {
+        domestic_or_international : "Domestic",
+        weight_in_oz : parseFloat(query.Parcel.Weight),
+        length : query.Parcel.Dim1,
+        width : query.Parcel.Dim2,
+        height : query.Parcel.Dim3,
+        from_zip : query.ReturnAddress.Zipcode,
+        to_zip : query.DestinationAddress.Zipcode,
+    }
+    var promise_rates = endicia.promise_rates(request_object);
+
+
+```
+
+
+### Setup Information
 lxxx is the sandbox  "RequesterID" for all sandbox accounts
 
 
@@ -27,7 +66,7 @@ Note - you wont actually get a token as a varriable. Check your console and grab
         "requester_id" : endicia_config.requester_id,
         "account_id" : endicia_config.account_id,
         "temp_pass" : "pass",
-        "new_pass" : "newpass", 
+        "new_pass" : "newpass",
     }
     var promise_token = endicia_interface.prototype.promise_new_token(request_data);
 ```

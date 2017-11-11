@@ -1,0 +1,31 @@
+{
+  "name": "shipping-endicia",
+  "version": "1.0.0",
+  "description": "Interface for Endicia's web API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uladkasach/node-shipping-endicia.git"
+  },
+  "keywords": [
+    "shipping",
+    "endicia",
+    "api"
+  ],
+  "author": "UladKasach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uladkasach/node-shipping-endicia/issues"
+  },
+  "homepage": "https://github.com/uladkasach/node-shipping-endicia#readme",
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "xml-js": "^1.5.2",
+    "xmlbuilder": "^9.0.4"
+  }
+}
